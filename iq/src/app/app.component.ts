@@ -66,11 +66,11 @@ export class AppComponent {
                         "images": [
                             {
                                 "isMain": false,
-                                "data": ""
+                                "data": "http://iqnetwork.ddns.net:5003/test/Z01iphone-1.4-(520x540).png"
                             },
                             {
                                 "isMain": false,
-                                "data": ""
+                                "data": "http://iqnetwork.ddns.net:5003/test/Z01iphone-1.4-(520x540).png"
                             }
                         ],
                         "in_stock": true,
@@ -80,7 +80,79 @@ export class AppComponent {
                                 "avlblQty": 876
                             }
                         ]
-                    }
+                    },
+                    {
+                      "uniqueProductId": 67577,
+                      "variants": [
+                          {
+                              "name": "Colour",
+                              "value": "blue"
+                          },
+                          {
+                              "name": "Size",
+                              "value": "S"
+                          }
+                      ],
+                      "is_discount": true,
+                      "discount_type": 1,
+                      "discount_value": 10,
+                      "discounted_price": "",
+                      "sku": "10001-R-L",
+                      "price": 800,
+                      "images": [
+                          {
+                              "isMain": false,
+                              "data": "http://iqnetwork.ddns.net:5003/test/Z01Mackbook-1.1-(520x540).png"
+                          },
+                          {
+                              "isMain": false,
+                              "data": "http://iqnetwork.ddns.net:5003/test/Z01Mackbook-1.1-(520x540).png"
+                          }
+                      ],
+                      "in_stock": true,
+                      "inventory": [
+                          {
+                              "wareHouseId": 123,
+                              "avlblQty": 876
+                          }
+                      ]
+                  },
+                  {
+                    "uniqueProductId": 67578,
+                    "variants": [
+                        {
+                            "name": "Colour",
+                            "value": "green"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "M"
+                        }
+                    ],
+                    "is_discount": true,
+                    "discount_type": 1,
+                    "discount_value": 10,
+                    "discounted_price": "",
+                    "sku": "10001-R-L",
+                    "price": 750,
+                    "images": [
+                        {
+                            "isMain": false,
+                            "data": "http://iqnetwork.ddns.net:5003/test/Z01iphone-1.4-(520x540).png"
+                        },
+                        {
+                            "isMain": false,
+                            "data": "http://iqnetwork.ddns.net:5003/test/Z01iphone-1.4-(520x540).png"
+                        }
+                    ],
+                    "in_stock": true,
+                    "inventory": [
+                        {
+                            "wareHouseId": 123,
+                            "avlblQty": 876
+                        }
+                    ]
+                  }
                 ]
             },
             "related_products": [
