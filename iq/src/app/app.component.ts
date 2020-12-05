@@ -31,16 +31,14 @@ export class AppComponent {
                 "is_used": false,
                 "is_in_sets": true,
                 "units_per_set": 5,
-                "has_variants": false,
-                "price": 1000,
-                "qty_left": 10,
+                
                 "commonImages": [
                     {
-                        "is_main": true,
+                        "isMain": true,
                         "data": "http://iqnetwork.ddns.net:5003/test/Z01iphone-1.4-(520x540).png"
                     },
                     {
-                        "is_main": false,
+                        "isMain": false,
                         "data": "http://iqnetwork.ddns.net:5003/test/Z01iphone-1.4-(520x540).png"
                     }
                 ],
@@ -99,6 +97,14 @@ export class AppComponent {
                       "images": [
                          
                           {
+                              "isMain": false,
+                              "data": "http://iqnetwork.ddns.net:5003/test/Z01Mackbook-1.1-(520x540).png"
+                          },
+                        {
+                              "isMain": false,
+                              "data": "http://iqnetwork.ddns.net:5003/test/Z01Mackbook-1.1-(520x540).png"
+                          },
+                        {
                               "isMain": false,
                               "data": "http://iqnetwork.ddns.net:5003/test/Z01Mackbook-1.1-(520x540).png"
                           }
