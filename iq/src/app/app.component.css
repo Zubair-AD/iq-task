@@ -110,6 +110,11 @@ svg {
   text-align: center;
 }
 
+ul li{
+  font-size: 15px;
+  font-weight: 400;
+}
+
 
 
 
@@ -162,3 +167,12 @@ svg {
 	opacity: 1;
   border: 1px solid #808080;
 }
+
+
+
+
+.colr,.siz{
+  font-size: 20px;
+  font-weight: 400;
+}
+

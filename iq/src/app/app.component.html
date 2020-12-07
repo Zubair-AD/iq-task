@@ -9,16 +9,16 @@
         <div id="myCarousel" class="carousel slide" data-interval="false">
 
   <div class="carousel-inner" role="listbox">
-      <div class="item active"  *ngFor="let item of response.response.data.product.other_details; let index = index" [class.active]="index == 0">
-        <div *ngFor="let image of item.images">
-        <img src="https://s14.postimg.cc/bnwpgsqnl/pixel1.png" alt="" style="width:100%">
+      <div class="item active"  *ngFor="let item of response.response.data.product.images; let index = index" [class.active]="index == 0">
+        <div >
+        <img src="{{item.data}}" alt="" style="width:100%">
         </div>
       </div>
     </div>
 	
-	<div id="thumbCarousel"  *ngFor="let item of response.response.data.product.other_details;">
-      <div data-target="#myCarousel" [data-slide-to]="index" class="thumb active" *ngFor="let image of item.images">
-        <img src="https://s14.postimg.cc/z24osq8kt/pixel1.png" alt="XZ" style="width: 50px; height: 50px">
+	<div id="thumbCarousel"  *ngFor="let item of response.response.data.product.images;let index = index">
+      <div data-target="#myCarousel" [attr.data-slide-to]="index" class="thumb active" >
+        <img src="{{item.data}}" alt="XZ" style="width: 50px; height: 50px">
       </div>          
     </div>
   
@@ -78,11 +78,14 @@
 
             <div class="desc">          
                  <p class="d_p">{{response.response.data.product.description}}</p>
+                 <ul class="bt-point" *ngFor="let item of response.response.data.product.bulletPts">
+                 <li>{{item}}</li>
+                 </ul>
            </div> 
 
             <div class="dolar">
             <h3> {{response.response.data.product.product_name}} <span>(2)</span></h3>  
-            <span class=d-ll>{{response.response.data.product.price}}</span><br>
+            <span class=d-ll>{{response.response.data.product.product_name}}</span><br>
             <section>
                 <label for="star-1">
                   <svg width="255" height="240" viewBox="0 0 51 48">
@@ -119,12 +122,13 @@
                 <div class="row">
                     <div class="col-sm-4 pd-i"> 
                      <input type="checkbox" class="i-p c-b" id="Unchecked">&nbsp;&nbsp;
-                     <p>IN STOCK</p>
+                     <p>IN STOCK</p>                  
                     </div>
                 </div>
               
             </div>
                
+            
          
             <div class="quantity">
                 <div class="row">
@@ -136,7 +140,14 @@
                     </div>
                 </div>        
             </div> 
-            
+
+            <div class="block-select clearfix">
+             <div class="color">
+               <p class="colr">Color : <span class="" style="color: red;">{{response.response.data.product.variants[0].value}} </span></p>
+               <p class="siz">Size : <span class="" style="color: red;"> {{response.response.data.product.variants[1].value}} </span></p>
+             </div>
+              </div>
+
             <br>
                         
             <div class="row buttons">
@@ -157,11 +168,11 @@
             </div>
 
           </div>
-
+</div>  
 
     </div>
 
-</div>
+
 
     
 
