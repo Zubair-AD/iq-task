@@ -12,10 +12,24 @@
     background-color:#fb641b !important; 
 }
 
+.h-ed{
+  color: #7e7e7e;
+  font-size: 20px;
+}
+
+.B-ed{
+  color: #7e7e7e;
+    font-size: 20px;
+    margin: 20px;
+}
+
 .d_p{
-    font-family: inherit;
-    font-size:20px;
-    font-weight:400;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 24px;
+  line-height: 22px;
+  color: #999999;
 }
 
 .d-ll{
@@ -110,9 +124,15 @@ svg {
   text-align: center;
 }
 
+ul{
+list-style-type: circle;
+line-height: 22px;
+ color: #999999;
+}
 ul li{
   font-size: 15px;
   font-weight: 400;
+   
 }
 
 
@@ -170,9 +190,71 @@ ul li{
 
 
 
-
-.colr,.siz{
-  font-size: 20px;
-  font-weight: 400;
+/*SELECT BLOCK*/
+.block-select {
+  margin-top: 15px;
+}
+.select-color,
+.select-size {
+  float: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: #888;
+}
+.select-color span,
+.select-size span {
+  display: block;
+  margin-bottom: 5px;
+}
+select.color {
+  width: 320px;
+  margin-right: 10px;
+}
+select.size {
+  width: 100px;
+}
+select.color, select.size {
+  padding: 8px 10px;
+  border: .5px solid #ddd;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: .7;
+  letter-spacing: .3px;
 }
 
+
+
+/*tabs*/
+.tabs{
+  border: 1px solid rgb(204, 204, 204);
+    margin-top: 50px;
+    background-color: white;
+}
+
+
+app-tab{
+ font-size: 15px;
+ font-weight:500;
+ padding: 10px;
+
+}
+app-tab:hover{
+  background-color: #e32426;
+  color:white;
+}
+
+app-tab:active{
+  background-color: #e32426;
+  color:white;
+}
+
+.tabs-selection {
+  background:rgb(204, 204, 204);
+  color: black; 
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  height:50px;
+  width: 100%;
+}

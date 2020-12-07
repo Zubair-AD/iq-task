@@ -9,14 +9,14 @@
         <div id="myCarousel" class="carousel slide" data-interval="false">
 
   <div class="carousel-inner" role="listbox">
-      <div class="item active"  *ngFor="let item of response.response.data.product.images; let index = index" [class.active]="index == 0">
+      <div class="item active"  *ngFor="let item of product.images; let index = index" [class.active]="index == 0">
         <div >
         <img src="{{item.data}}" alt="" style="width:100%">
         </div>
       </div>
     </div>
 	
-	<div id="thumbCarousel"  *ngFor="let item of response.response.data.product.images;let index = index">
+	<div id="thumbCarousel"  *ngFor="let item of product.images;let index = index">
       <div data-target="#myCarousel" [attr.data-slide-to]="index" class="thumb active" >
         <img src="{{item.data}}" alt="XZ" style="width: 50px; height: 50px">
       </div>          
@@ -30,7 +30,7 @@
              
         <div class="prod-img">
           <div class="row">
-          <div class="col-sm-5" *ngFor= "let item of response.response.data.related_products">
+          <div class="col-sm-5" *ngFor= "let item of actualInput.response.data.related_products">
             <img src="{{item.img}}" class="pict">
             <div class="pc-p">
             <h4>{{item.product_name}}</h4>
@@ -76,16 +76,11 @@
 
           <div class="desc-amt">
 
-            <div class="desc">          
-                 <p class="d_p">{{response.response.data.product.description}}</p>
-                 <ul class="bt-point" *ngFor="let item of response.response.data.product.bulletPts">
-                 <li>{{item}}</li>
-                 </ul>
-           </div> 
+           
 
             <div class="dolar">
-            <h3> {{response.response.data.product.product_name}} <span>(2)</span></h3>  
-            <span class=d-ll>{{response.response.data.product.product_name}}</span><br>
+            <h3> {{product.product_name}} <span>(2)</span></h3>  
+            <span class=d-ll>{{product.price}}</span><br>
             <section>
                 <label for="star-1">
                   <svg width="255" height="240" viewBox="0 0 51 48">
@@ -142,10 +137,28 @@
             </div> 
 
             <div class="block-select clearfix">
-             <div class="color">
-               <p class="colr">Color : <span class="" style="color: red;">{{response.response.data.product.variants[0].value}} </span></p>
-               <p class="siz">Size : <span class="" style="color: red;"> {{response.response.data.product.variants[1].value}} </span></p>
-             </div>
+              <form>
+                <div class="select-color">
+                  <span>Select Color</span>
+                  <select class="color" >
+<!--                    
+                    <option *ngFor="let item of product.types">
+                    
+                      {{Colour.typ}}
+                    
+                   
+                    </option> 
+             -->
+                  </select>
+                </div>
+                <div class="select-size">
+                  <span>Size</span>
+                  <select class="size">
+                    <option>8</option>
+                  
+                  </select>
+                </div> 
+               </form> 
               </div>
 
             <br>
@@ -167,8 +180,42 @@
             
             </div>
 
+            <!--review-->
+         <div class="tabs">
+          <div class="tabs-selection">
+            <app-tab [active]="isSelected(1)" (click)="setTab(1)">DESCRIPTION</app-tab>
+            <app-tab [active]="isSelected(2)" (click)="setTab(2)">SPECIFICATION</app-tab>
+            <app-tab [active]="isSelected(3)" (click)="setTab(3)">REVIEWS</app-tab>
           </div>
-</div>  
+      
+          <div [ngSwitch]="tab">
+            <app-tab-content *ngSwitchCase="1">
+             
+              <p class="d_p">
+                <span class="h-ed"> Description</span>
+                <br>
+                <br>                
+                {{product.description}}</p>
+            </app-tab-content>
+            <app-tab-content *ngSwitchCase="2">
+              tab2
+            </app-tab-content>
+            <app-tab-content *ngSwitchCase="3">
+              <span class="B-ed"> Specification</span>
+              <br>
+              <br>   
+              <ul class="bt-point" *ngFor="let item of product.bulletPts">
+                <li>{{item}}</li>
+                </ul>
+            </app-tab-content>
+          </div>
+          </div>
+            <!---->
+
+          </div>
+
+
+       </div>  
 
     </div>
 
